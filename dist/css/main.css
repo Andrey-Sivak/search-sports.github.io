@@ -1,0 +1,87 @@
+body,
+p,
+ul, li,
+h1, h2, h3, h4, h5, h6,
+input,
+textarea,
+a {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: none;
+  text-decoration: none; }
+
+* {
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: "Cuprum";
+  font-display: swap;
+  font-weight: 400;
+  src: url("../fonts/Cuprum-Regular.ttf") format("truetype");
+  font-style: normal; }
+
+@font-face {
+  font-family: "Cuprum";
+  font-display: swap;
+  font-weight: 700;
+  src: url("../fonts/Cuprum-Bold.ttf") format("truetype");
+  font-style: normal; }
+
+@font-face {
+  font-family: "Cuprum";
+  font-display: swap;
+  src: url("../fonts/Cuprum-BoldItalic.ttf") format("truetype");
+  font-style: italic; }
+
+@font-face {
+  font-family: "Cuprum";
+  font-display: swap;
+  src: url("../fonts/Cuprum-Italic.ttf") format("truetype");
+  font-style: italic; }
+
+.header {
+  background-color: #202020;
+  padding: 21px 0; }
+  .header__wrap {
+    max-width: 1370px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .header__left {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .header__right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .header__link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff; }
+    .header__link:hover, .header__link:active, .header__link:focus {
+      text-decoration: underline; }
+
+/*# sourceMappingURL=main.css.map */

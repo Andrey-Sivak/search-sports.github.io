@@ -1,0 +1,258 @@
+@mixin response-to ( $breakpoint ) {
+  @if( map-has-key( $breakpoints, $breakpoint ) ) {
+    @media( max-width: #{map-get( $breakpoints, $breakpoint ) } ) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}` . ' +
+      'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+@mixin font-face($path, $family, $type: null, $extension: null, $style: null) {
+  // font-weight values map
+  $font-weights: (
+          'Thin': 100,
+          'Extra-Light': 200,
+          'Light': 300,
+          'Regular': 400,
+          'Medium': 500,
+          'Simi-Bold': 600,
+          'Bold': 700,
+          'Extra-Bold': 800,
+          'Black': 900,
+          'Extra-Black': 950
+  );
+
+  @font-face {
+    font-family: $family;
+    font-display: swap;
+
+    // set font-weight property
+    @if $type {
+      @each $weight-name, $weight-value in $font-weights {
+        @if $type == $weight-name {
+          font-weight: $weight-value;
+        }
+      }
+    } @else {
+      font-weight: 400;
+    }
+
+    // check font extension and font-type and then set src property
+    @if $extension and $type {
+      src: url('#{$path}/#{$family}-#{$type}.#{$extension}') format('truetype');
+    } @else if $extension or $type {
+      @if $type {
+        src: url('#{$path}/#{$family}-#{$type}.ttf') format('truetype');
+      } @else if $extension {
+        src: url('#{$path}/#{$family}.#{$extension}') format('truetype');
+      }
+    } @else {
+      src: url('#{$path}/#{$family}.ttf');
+    }
+
+    // set font-style property
+    @if $style {
+      font-style: $style;
+    } @else {
+      font-style: normal;
+    }
+
+  }
+}
+
+@mixin flex( $direction: row, $j-c: flex-start, $a-i: flex-start, $flex-wrap: wrap ) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $j-c;
+  align-items: $a-i;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin flex-center( $direction: row, $flex-wrap: wrap) {
+  @include flex( $direction, center, center, $flex-wrap );
+}
+
+@mixin on-event {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin message-tint( $color, $background-color: null ) {
+  color: $color;
+
+  @if ( type_of( $color ) == 'color' ) {
+    background-color: lighten( $color, 30% );
+  } @else {
+    @warn 'Parameter $color for message mixin should be a color.';
+  }
+}
+
+@mixin pos-absolute( $top: null, $right: null, $bottom: null, $left: null ) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin transition-ease {
+  transition: all ease-in-out .3s;
+}
+
+@mixin btn($w: null, $h: null) {
+  @if $w {
+    width: #{$w}px;
+  } @else {
+    width: 188px;
+  }
+
+  @if $h {
+    height: #{$h}px;
+  } @else {
+    height: 57px;
+  }
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  position: relative;
+  background-color: transparent;
+  border: none;
+
+  & svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: translate(50%, 50%);
+    left: -50%;
+    top: -50%;
+    z-index: 1;
+
+    & .bg-svg {
+      fill: $dark-red;
+      @include transition-ease();
+    }
+
+    & .border-svg {
+      position: relative;
+      @include transition-ease();
+    }
+  }
+
+  &:hover .bg-svg {
+    fill: lighten($dark-red, 7%);
+  }
+
+  &:hover .border-svg {
+    transform: translate(-2%, -2%);
+  }
+
+  & span {
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+@mixin product-card($color: null) {
+  &.active {
+
+    & .products__item_front {
+      transform: rotateY(180deg);
+    }
+
+    & .products__item_back {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .products__item_title {
+    color: $color;
+  }
+
+  .products__item_footer span.active {
+    background-color: $color;
+  }
+
+  .products__item_caption {
+    color: $color;
+  }
+
+  .products__item_note {
+    color: $color;
+  }
+
+  .products__item_bottom {
+    font-weight: 300;
+    font-size: 18px;
+    font-family: $din;
+    position: absolute;
+    @include transition-ease;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 15px 48px;
+
+    & span {
+      padding-bottom: 5px;
+    }
+  }
+
+  & .help {
+    position: absolute;
+    border-radius: 20px;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    opacity: 0;
+    width: 100%;
+    background-color: $white;
+    @include transition-ease;
+  }
+
+  @include on-event {
+    .products__item_bottom {
+      top: 290px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, $color 112.39%);
+    }
+  }
+
+  &.no-hover {
+
+    @include on-event {
+      .products__item_bottom {
+        opacity: 0;
+      }
+
+      .help {
+        opacity: 0;
+      }
+    }
+  }
+
+  @include on-event {
+    filter: drop-shadow(0px 20px 50px rgba(101, 89, 28, 0.3));
+
+    .products__item_bottom {
+      z-index: 1000;
+      opacity: 1;
+    }
+
+    .help {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.header {
+  background-color: #202020;
+  padding: 21px 0;
+
+  &__wrap {
+    max-width: 1370px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    font-family: $roboto;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+
+    @include on-event {
+      text-decoration: underline;
+    }
+  }
+}
