@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>название</title>
+	<title>SearchSports</title>
 	<link rel="stylesheet" type="text/css" href="./dist/css/main.css">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,72 +22,84 @@
 <header class="header">
 	<div class="header__wrap">
 		<div class="header__left">
-			<a href="/" class="header__logo">ss</a>
-			<a href="#" class="header__link">Тренировка</a>
-			<a href="#" class="header__link">Аренда</a>
-			<a href="#" class="header__link">Карта</a>
+			<a href="./index.html" class="header__logo">ss</a>
+			<div>
+				<a href="./training.html" class="header__link">Тренировка</a>
+				<a href="./rent.html" class="header__link">Аренда</a>
+				<a href="./map.html" class="header__link">Карта</a>
+			</div>
 		</div>
 		<div class="header__right">
-			<a href="#" class="header__link">Добавить объект</a>
+			<a href="./add-location.html" class="header__link">Добавить объект</a>
 			<a href="#" class="header__link">Выбор города</a>
-			<a href="#" class="header__link">Войти</a>
+			<a href="./account.html" class="header__link">Войти</a>
 		</div>
 	</div>
 </header>
 
 <main class="home">
 
-	<section class="first-section">
-		<h1 class="first-section__caption">SearchSports</h1>
-		<span class="first-section__subcaption">Бронируй. Занимайся. Совершенствуйся.</span>
+	<section class="first-section" style="background-image: url('./dist/img/main-first-sec.jpg')">
+		<div class="container">
+			<h1 class="first-section__caption">SearchSports</h1>
+			<span class="first-section__subcaption">Бронируй. Занимайся. Совершенствуйся.</span>
+		</div>
 	</section>
 
-	<section class="second-section">
+	<section class="second-section bg-grey-img">
 		<h2 class="second-section__caption">Чем хотите заняться?</h2>
 		<div class="second-section__wrap">
 			<div class="second-section__item">
+				<a href="./training.html" class="second-section__item_link"></a>
 				<div class="second-section__item_img">
-					<img src="./dist/img/" alt="img">
+					<img src="./dist/img/ball1.png" alt="img">
 				</div>
-				<p class="second-section__item_text">Тренироваться</p>
+				<p class="second-section__item_text text">Тренироваться</p>
 			</div>
 			<div class="second-section__item">
+				<a href="./rent.html" class="second-section__item_link"></a>
 				<div class="second-section__item_img">
-					<img src="./dist/img/" alt="img">
+					<img src="./dist/img/home_alt_minus.png" alt="img">
 				</div>
-				<p class="second-section__item_text">Арендовать</p>
+				<p class="second-section__item_text text">Арендовать</p>
 			</div>
 			<div class="second-section__item">
+				<a href="./map.html" class="second-section__item_link"></a>
 				<div class="second-section__item_img">
-					<img src="./dist/img/" alt="img">
+					<img src="./dist/img/fi-rr-picture.png" alt="img">
 				</div>
-				<p class="second-section__item_text">Посмотреть карту площадок</p>
+				<p class="second-section__item_text text">Посмотреть карту площадок</p>
 			</div>
 		</div>
 	</section>
 
-	<section class="container third-section">
-		<div class="third-section__img">
-			<img src="./dist/img" alt="img">
-		</div>
-		<div class="third-section__content">
-			<h2 class="caption">Кто мы и для чего мы?</h2>
-			<p class="third-section__text">SearchSports.ru — это удобный интернет-сервис для желающих заниматься активными видами спорта и развивать своё тело. Наша цель - чтобы каждый, кто хочет заниматься спортом, смог выбрать для себя удобную площадку и секцию, находящуюся в его городе.
-				<br>
-				Выбирайте ваш любимый вид спорта и вперед к новым вершинам, удачи!</p>
+	<section class="third-section">
+		<div class="container">
+			<div class="third-section__img">
+				<img src="./dist/img/third-sec-img.png" alt="img">
+			</div>
+			<div class="third-section__content">
+				<h2 class="caption">Кто мы и для чего мы?</h2>
+				<p class="third-section__text text">SearchSports.ru — это удобный интернет-сервис для желающих заниматься активными видами спорта и развивать своё тело. Наша цель - чтобы каждый, кто хочет заниматься спортом, смог выбрать для себя удобную площадку и секцию, находящуюся в его городе.
+					<br>
+					<br>
+					Выбирайте ваш любимый вид спорта и вперед к новым вершинам, удачи!</p>
+			</div>
 		</div>
 	</section>
 
-	<section class="container four-section">
-		<div class="four-section__left">
-			<h2 class="caption upper">тренировки</h2>
-			<span class="four-section__note">Начни тренироваться вместе с нами</span>
-			<a href="#" class="four-section__btn">Перейти к тренировкам</a>
-		</div>
-		<div class="four-section__right">
-			<p class="four-section__right_item">Простота</p>
-			<p class="four-section__right_item">Удобство</p>
-			<p class="four-section__right_item">Богатый выбор</p>
+	<section class="four-section bg-grey-img">
+		<div class="container">
+			<div class="four-section__left">
+				<h2 class="caption upper">тренировки</h2>
+				<span class="four-section__note text">Начни тренироваться вместе с нами</span>
+				<a href="#" class="four-section__btn btn">Перейти к тренировкам</a>
+			</div>
+			<div class="four-section__right">
+				<p class="four-section__right_item">Простота</p>
+				<p class="four-section__right_item">Удобство</p>
+				<p class="four-section__right_item">Богатый выбор</p>
+			</div>
 		</div>
 	</section>
 
@@ -95,46 +107,59 @@
 		<h2 class="caption upper">выбери занятие по душе</h2>
 		<div class="slider five-section__wrap">
 			<div class="five-section__item">
-				<p class="five-section__item_title">Футбол</p>
+				<img class="five-section__item_img" src="./dist/img/foci.jpg" alt="img">
+				<p class="five-section__item_title text">Футбол</p>
 			</div>
 			<div class="five-section__item">
-				<p class="five-section__item_title">Баскетбол</p>
+				<img class="five-section__item_img" src="./dist/img/foci.jpg" alt="img">
+				<p class="five-section__item_title text">Баскетбол</p>
 			</div>
 			<div class="five-section__item">
-				<p class="five-section__item_title">Воллейбол</p>
+				<img class="five-section__item_img" src="./dist/img/foci.jpg" alt="img">
+				<p class="five-section__item_title text">Воллейбол</p>
 			</div>
 		</div>
 	</section>
 
-	<section class="container six-section">
-		<div class="six-section__header">
-			<h2 class="caption upper">аренда площадок</h2>
-			<a href="#" class="six-section__header_btn">Каталог площадок</a>
-		</div>
-		<p class="six-section__subcaption">Арендуй комфортную для себя площадку по своим параметрам</p>
-		<div class="six-section__wrap">
-			<div class="six-section__item">
-				<div class="six-section__item_img"></div>
-				<p class="six-section__item_title">Название площадки</p>
+	<section class="six-section bg-grey-img">
+		<div class="container">
+			<div class="six-section__header">
+				<h2 class="caption upper">аренда площадок</h2>
+				<a href="#" class="six-section__header_btn btn">Каталог площадок</a>
 			</div>
-			<div class="six-section__item">
-				<div class="six-section__item_img"></div>
-				<p class="six-section__item_title">Название площадки</p>
-			</div>
-			<div class="six-section__item">
-				<div class="six-section__item_img"></div>
-				<p class="six-section__item_title">Название площадки</p>
-			</div>
-			<div class="six-section__item">
-				<div class="six-section__item_img"></div>
-				<p class="six-section__item_title">Название площадки</p>
+			<p class="six-section__subcaption">Арендуй комфортную для себя площадку по своим параметрам</p>
+			<div class="six-section__wrap">
+				<div class="six-section__item">
+					<div class="six-section__item_img">
+						<div class="i" style="background-image: url('./dist/img/sportsground.jpeg')"></div>
+					</div>
+					<p class="six-section__item_title">Название площадки</p>
+				</div>
+				<div class="six-section__item">
+					<div class="six-section__item_img">
+						<div class="i" style="background-image: url('./dist/img/sportsground.jpeg')"></div>
+					</div>
+					<p class="six-section__item_title">Название площадки</p>
+				</div>
+				<div class="six-section__item">
+					<div class="six-section__item_img">
+						<div class="i" style="background-image: url('./dist/img/sportsground.jpeg')"></div>
+					</div>
+					<p class="six-section__item_title">Название площадки</p>
+				</div>
+				<div class="six-section__item">
+					<div class="six-section__item_img">
+						<div class="i" style="background-image: url('./dist/img/sportsground.jpeg')"></div>
+					</div>
+					<p class="six-section__item_title">Название площадки</p>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="seven-section">
 		<h2 class="caption upper seven-section__caption">ИЛИ НАЙДИ БЕСПЛАТНУЮ ПЛОЩАДКУ НА КАРТЕ</h2>
-		<div class="seven-section__wrap">
+		<div class="seven-section__wrap bg-grey-img">
 			<div class="container">
 				<div class="seven-section__content">
 					<p class="caption">Карта</p>
@@ -185,11 +210,11 @@
 		</div>
 	</section>
 
-	<section class="nine-section">
+	<section class="nine-section bg-grey-img">
 		<div class="container">
-			<h2 class="caption"></h2>
+			<h2 class="caption">Добавить объект</h2>
 			<div class="nine-section__content">
-				<p class="nine-section__text"></p>
+				<p class="nine-section__text text">Если у вас есть личный объект или вы хотите добавить свою любмую площадку на карту</p>
 				<a href="#" class="btn nine-section__btn">Добавить объект</a>
 			</div>
 		</div>
@@ -202,23 +227,27 @@
 		<div class="footer__left">
 			<ul class="menu">
 				<li class="menu__item">
-					<a class="footer__link" href="#">О нас</a>
+					<a class="footer__link" href="./about.html">О нас</a>
 				</li>
 				<li class="menu__item">
-					<a class="footer__link" href="#">Контакты</a>
+					<a class="footer__link" href="./contacts.html">Контакты</a>
 				</li>
 				<li class="menu__item">
-					<a class="footer__link" href="#">Добавить объект</a>
+					<a class="footer__link" href="./add-location.html">Добавить объект</a>
 				</li>
 			</ul>
 			<p class="footer__link footer__copy">2021 SearсhSports.ru &copy;</p>
 		</div>
 		<div class="footer__right">
 			<div class="footer__social">
-				<a href="#"></a>
-				<a href="#"></a>
+				<a href="#">
+					<img src="./dist/img/vk.png" alt="img">
+				</a>
+				<a href="#">
+					<img src="./dist/img/instagram.png" alt="img">
+				</a>
 			</div>
-			<p class="footer__link">orlovartem@mail.ru</p>
+			<a href="mailto:orlovartem@mail.ru" class="footer__link">orlovartem@mail.ru</a>
 		</div>
 	</div>
 </footer>

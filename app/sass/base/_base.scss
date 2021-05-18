@@ -1,0 +1,55 @@
+body {
+  font-family: $roboto;
+}
+
+.h-100 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.caption {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: $roboto-slab;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.bg-grey-img {
+  background-image: url('../../img/grey-bg.svg');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.btn {
+  background-color: #FE6A6A;
+  display: block;
+  text-align: center;
+  color: #000;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 11px 0;
+  border-radius: 5px;
+  @include transition-ease;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0);
+
+  @include on-event {
+    background-color: darken(#FE6A6A, 5%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
