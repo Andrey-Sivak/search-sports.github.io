@@ -122,6 +122,10 @@
           font-family: $roboto;
         }
       }
+
+      & label {
+        left: 20px;
+      }
     }
   }
 }
