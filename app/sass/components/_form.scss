@@ -66,6 +66,59 @@
   }
 }
 
+.settings {
+
+  &__form {
+    max-width: 452px;
+    width: 100%;
+    margin: 0 auto;
+
+    &_title {
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    &group {
+      margin-bottom: 20px;
+      width: 100%;
+      position: relative;
+
+      & input {
+        display: block;
+        width: 100%;
+        padding: 18px 20px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      & label {
+        left: 20px;
+      }
+    }
+
+    & button {
+      background: #E2E2E2;
+      border-radius: 5px;
+      display: block;
+      width: 100%;
+      cursor: pointer;
+      text-align: center;
+      font-size: 24px;
+      padding: 18px 0;
+      border: none;
+      font-weight: 500;
+      @include transition-ease;
+      margin-bottom: 20px;
+
+      @include on-event {
+        background: darken(#E2E2E2, 10);
+      }
+    }
+  }
+}
+
 input,
 textarea {
 

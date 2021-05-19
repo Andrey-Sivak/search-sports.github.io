@@ -1,10 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>SearchSports</title>
+  <link rel="stylesheet" type="text/css" href="./dist/css/main.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="./dist/js/main.js"></script>
 </head>
 <body>
+
+<header class="header">
+  <div class="header__wrap">
+    <div class="header__left">
+      <a href="./index.html" class="header__logo">ss</a>
+      <div>
+        <a href="./training.html" class="header__link">Тренировка</a>
+        <a href="./rent.html" class="header__link">Аренда</a>
+        <a href="./map.html" class="header__link">Карта</a>
+      </div>
+    </div>
+    <div class="header__right">
+      <a href="./add-location.html" class="header__link">Добавить объект</a>
+      <a href="#" class="header__link">Выбор города</a>
+      <a href="./account.html" class="header__link">Войти</a>
+    </div>
+  </div>
+</header>
+
+<main class="settings">
+
+  <h1 class="page-title">Настройки</h1>
+
+  <div class="settings__wrap">
+    <p class="settings__header">Редактировать профиль</p>
+    <form action="#" class="settings__form">
+      <div class="settings__formgroup">
+        <input type="text"
+               name="name"
+               id="name"
+               placeholder="Имя">
+        <label for="name">Имя</label>
+      </div>
+      <div class="settings__formgroup">
+        <input type="text"
+               name="l-name"
+               id="l-name"
+               placeholder="Фамилия">
+        <label for="l-name">Фамилия</label>
+      </div>
+      <div class="settings__formgroup">
+        <input type="text"
+               name="email"
+               id="email"
+               placeholder="E-mail">
+        <label for="email">E-mail</label>
+      </div>
+      <button type="submit">Сохранить изменения</button>
+    </form>
+
+
+    <form action="#" class="settings__form">
+      <p class="settings__form_title text">Сменить пароль:</p>
+      <div class="settings__formgroup">
+        <input type="text"
+               name="last-pass"
+               id="last-pass"
+               placeholder="Введите старый пароль">
+        <label for="last-pass">Введите старый пароль</label>
+      </div>
+      <div class="settings__formgroup">
+        <input type="text"
+               name="new-pass"
+               id="new-pass"
+               placeholder="Введите новый пароль">
+        <label for="l-name">Введите новый пароль</label>
+      </div>
+      <div class="settings__formgroup">
+        <input type="text"
+               name="repeat-pass"
+               id="repeat-pass"
+               placeholder="Повторите новый пароль">
+        <label for="repeat-pass">Повторите новый пароль</label>
+      </div>
+      <button type="submit">Сохранить изменения</button>
+    </form>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__left">
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="footer__link" href="./about.html">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a class="footer__link" href="./contacts.html">Контакты</a>
+        </li>
+        <li class="menu__item">
+          <a class="footer__link" href="./add-location.html">Добавить объект</a>
+        </li>
+      </ul>
+      <p class="footer__link footer__copy">2021 SearсhSports.ru &copy;</p>
+    </div>
+    <div class="footer__right">
+      <div class="footer__social">
+        <a href="#">
+          <img src="./dist/img/vk.png" alt="img">
+        </a>
+        <a href="#">
+          <img src="./dist/img/instagram.png" alt="img">
+        </a>
+      </div>
+      <a href="mailto:orlovartem@mail.ru" class="footer__link">orlovartem@mail.ru</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

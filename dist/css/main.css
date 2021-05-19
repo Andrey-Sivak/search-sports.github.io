@@ -75,6 +75,11 @@ body {
   font-size: 24px;
   font-weight: 400; }
 
+.page-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700; }
+
 .bg-grey-img {
   background-image: url("../img/grey-bg.svg");
   background-repeat: repeat;
@@ -88,6 +93,8 @@ body {
   color: #000;
   font-size: 24px;
   font-weight: 400;
+  border: none;
+  cursor: pointer;
   padding: 11px 0;
   border-radius: 5px;
   -webkit-transition: all ease-in-out .3s;
@@ -221,7 +228,8 @@ body {
       text-decoration: underline; }
 
 .add-form {
-  max-width: 400px; }
+  max-width: 410px;
+  width: 100%; }
   .add-form__title {
     font-size: 24px;
     font-weight: 500;
@@ -243,7 +251,8 @@ body {
       left: 16px; }
     .add-form__formgroup textarea {
       min-height: 102px;
-      resize: vertical; }
+      resize: vertical;
+      font-family: "Roboto", sans-serif; }
   .add-form__input {
     width: 100%;
     background: #C4C4C4;
@@ -283,42 +292,83 @@ body {
     border: none;
     cursor: pointer; }
 
-input::-webkit-input-placeholder {
+.settings__form {
+  max-width: 452px;
+  width: 100%;
+  margin: 0 auto; }
+  .settings__form_title {
+    font-weight: 500;
+    margin-bottom: 20px; }
+  .settings__formgroup {
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative; }
+    .settings__formgroup input {
+      display: block;
+      width: 100%;
+      padding: 18px 20px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      font-size: 24px;
+      font-weight: 500; }
+    .settings__formgroup label {
+      left: 20px; }
+  .settings__form button {
+    background: #E2E2E2;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    padding: 18px 0;
+    border: none;
+    font-weight: 500;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+    margin-bottom: 20px; }
+    .settings__form button:hover, .settings__form button:active, .settings__form button:focus {
+      background: #c9c9c9; }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.5);
   font-family: "Roboto", sans-serif; }
 
-input::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   color: rgba(0, 0, 0, 0.5);
   font-family: "Roboto", sans-serif; }
 
-input:-ms-input-placeholder {
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.5);
   font-family: "Roboto", sans-serif; }
 
-input::-ms-input-placeholder {
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.5);
   font-family: "Roboto", sans-serif; }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: rgba(0, 0, 0, 0.5);
   font-family: "Roboto", sans-serif; }
 
-input:focus::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
   color: transparent; }
 
-input:focus::-moz-placeholder {
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
   color: transparent; }
 
-input:focus:-ms-input-placeholder {
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {
   color: transparent; }
 
-input:focus::-ms-input-placeholder {
+input:focus::-ms-input-placeholder, textarea:focus::-ms-input-placeholder {
   color: transparent; }
 
-input:focus::placeholder {
+input:focus::placeholder,
+textarea:focus::placeholder {
   color: transparent; }
 
-input:focus + label {
+input:focus + label,
+textarea:focus + label {
   opacity: 1;
   z-index: 2;
   font-size: 10px;
@@ -899,7 +949,8 @@ label {
 .single {
   padding-top: 60px;
   padding-bottom: 60px;
-  min-height: 80vh; }
+  min-height: 80vh;
+  max-width: 970px; }
   .single__header {
     display: -webkit-box;
     display: -webkit-flex;
@@ -912,8 +963,14 @@ label {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-bottom: 28px; }
+  .single__info {
+    margin-bottom: 44px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
   .single__address {
-    margin-bottom: 44px; }
+    margin-right: 45px; }
   .single__wrap {
     margin-bottom: 30px;
     display: -webkit-box;
@@ -934,5 +991,270 @@ label {
       text-decoration: underline; }
       .single__content .text a:hover, .single__content .text a:active, .single__content .text a:focus {
         text-decoration: none; }
+  .single__reviews {
+    margin-top: 60px; }
+    .single__reviews_item {
+      margin-bottom: 40px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+      .single__reviews_item-avatar {
+        min-width: 90px;
+        min-height: 90px;
+        border-radius: 50%;
+        background-color: #C4C4C4;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        margin-right: 50px; }
+        .single__reviews_item-avatar span {
+          font-size: 40px; }
+      .single__reviews_item-review {
+        background: #F0F0F0;
+        border-radius: 5px;
+        padding: 12px 27px; }
+      .single__reviews_item-author {
+        font-size: 21px; }
+      .single__reviews_item-text {
+        font-size: 18px;
+        margin-top: 11px; }
+  .single__review {
+    width: 100%;
+    margin-bottom: 27px; }
+    .single__review_form {
+      position: relative; }
+      .single__review_form button {
+        width: 250px;
+        margin-left: auto; }
+    .single__review_formgroup {
+      position: relative;
+      width: 100%;
+      margin-bottom: 15px; }
+      .single__review_formgroup textarea {
+        display: block;
+        width: 100%;
+        resize: vertical;
+        min-height: 100px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 24px;
+        font-family: "Roboto", sans-serif; }
+        .single__review_formgroup textarea::-webkit-input-placeholder {
+          font-family: "Roboto", sans-serif; }
+        .single__review_formgroup textarea::-moz-placeholder {
+          font-family: "Roboto", sans-serif; }
+        .single__review_formgroup textarea:-ms-input-placeholder {
+          font-family: "Roboto", sans-serif; }
+        .single__review_formgroup textarea::-ms-input-placeholder {
+          font-family: "Roboto", sans-serif; }
+        .single__review_formgroup textarea::placeholder {
+          font-family: "Roboto", sans-serif; }
+      .single__review_formgroup label {
+        left: 20px; }
+
+.about {
+  max-width: 750px;
+  min-height: 80vh;
+  padding: 30px 0;
+  margin: 0 auto; }
+  .about__block {
+    margin-bottom: 25px; }
+  .about__caption {
+    font-size: 24px;
+    font-weight: 500; }
+  .about__text {
+    font-size: 18px; }
+
+.contact {
+  max-width: 350px;
+  min-height: 80vh;
+  padding: 30px 0;
+  margin: 0 auto; }
+  .contact__caption {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px; }
+  .contact__item {
+    margin-bottom: 15px; }
+    .contact__item p {
+      margin-right: 15px;
+      font-size: 18px; }
+      .contact__item p:first-of-type {
+        font-weight: 500; }
+
+.account {
+  padding-top: 30px;
+  padding-bottom: 40px; }
+  .account__header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    max-width: 1040px;
+    margin: 15px auto 45px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .account__header_info {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .account__header_info .text:first-of-type {
+        margin-bottom: 10px; }
+    .account__header_avatar {
+      width: 135px;
+      height: 135px;
+      background-color: #C4C4C4;
+      border-radius: 50%;
+      margin-right: 40px;
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      overflow: hidden; }
+      .account__header_avatar-img {
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-position: center;
+        background-size: cover; }
+      .account__header_avatar span {
+        font-size: 60px; }
+    .account__header_btn a {
+      display: block;
+      background: #C4C4C4;
+      border-radius: 5px;
+      text-align: center;
+      padding: 12px 0;
+      width: 260px;
+      font-size: 24px;
+      color: #000;
+      -webkit-transition: all ease-in-out .3s;
+      transition: all ease-in-out .3s; }
+      .account__header_btn a:hover, .account__header_btn a:active, .account__header_btn a:focus {
+        background: #ababab; }
+  .account__current-books {
+    background-color: #C4C4C4;
+    padding: 20px 0;
+    margin-bottom: 52px; }
+    .account__current-books_title {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      font-size: 24px;
+      font-weight: 500; }
+    .account__current-books_wrap {
+      margin-top: 26px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .account__current-books_item {
+      width: 235px; }
+      .account__current-books_item-img {
+        display: block;
+        background-color: #fff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        margin-bottom: 13px;
+        width: 235px;
+        height: 190px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; }
+      .account__current-books_item p {
+        color: #000;
+        margin-bottom: 6px;
+        font-size: 18px; }
+  .account__btns a {
+    width: 450px;
+    display: block;
+    margin: 0 auto 30px;
+    background: #C4C4C4;
+    border-radius: 5px;
+    padding: 21px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #000; }
+    .account__btns a:hover, .account__btns a:active, .account__btns a:focus {
+      background: #ababab; }
+
+.settings {
+  max-width: 910px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 45px; }
+  .settings__wrap {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #000000;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 30px; }
+  .settings__header {
+    background: #E2E2E2;
+    padding: 17px 0;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 500; }
 
 /*# sourceMappingURL=main.css.map */
