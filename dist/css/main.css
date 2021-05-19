@@ -1291,10 +1291,23 @@ label {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      position: relative; }
     .history__item_title {
       font-size: 24px;
       color: #000;
       font-weight: 500; }
+  .history.favorites .history__item_img:before {
+    background-image: url("../img/heart_fill.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 13px;
+    width: 20px;
+    height: 18px;
+    z-index: 2; }
 
 /*# sourceMappingURL=main.css.map */
