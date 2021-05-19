@@ -1,0 +1,127 @@
+.single {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-height: 80vh;
+  max-width: 970px;
+
+  &__header {
+    display: flex;
+    width: 100%;
+    max-width: 850px;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+
+  &__info {
+    margin-bottom: 44px;
+    display: flex;
+  }
+
+  &__address {
+    margin-right: 45px;
+  }
+
+  &__wrap {
+    margin-bottom: 30px;
+    display: flex;
+  }
+
+  &__img {
+    width: 618px;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 50px;
+  }
+
+  &__content {
+
+    & .text {
+      margin-bottom: 25px;
+
+      & a {
+        color: #000;
+        text-decoration: underline;
+
+        @include on-event {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__reviews {
+    margin-top: 60px;
+
+    &_item {
+      margin-bottom: 40px;
+      display: flex;
+      align-items: flex-start;
+
+      &-avatar {
+        min-width: 90px;
+        min-height: 90px;
+        border-radius: 50%;
+        background-color: #C4C4C4;
+        @include flex-center();
+        margin-right: 50px;
+
+        & span {
+          font-size: 40px;
+        }
+      }
+
+      &-review {
+        background: #F0F0F0;
+        border-radius: 5px;
+        padding: 12px 27px;
+      }
+
+      &-author {
+        font-size: 21px;
+      }
+
+      &-text {
+        font-size: 18px;
+        margin-top: 11px;
+      }
+    }
+  }
+
+  &__review {
+    width: 100%;
+    margin-bottom: 27px;
+
+    &_form {
+      position: relative;
+
+      & button {
+        width: 250px;
+        margin-left: auto;
+      }
+    }
+
+    &_formgroup {
+      position: relative;
+      width: 100%;
+      margin-bottom: 15px;
+
+      & textarea {
+        display: block;
+        width: 100%;
+        resize: vertical;
+        min-height: 100px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 24px;
+        font-family: $roboto;
+
+        &::placeholder {
+          font-family: $roboto;
+        }
+      }
+    }
+  }
+}
