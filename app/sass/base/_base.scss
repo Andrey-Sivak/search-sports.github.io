@@ -12,12 +12,25 @@ body {
 .container {
   max-width: $container;
   margin: 0 auto;
+
+  @include response-to(large) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .caption {
   font-size: 36px;
   font-weight: 700;
   font-family: $roboto-slab;
+
+  @include response-to(large) {
+    font-size: 30px;
+  }
+
+  @include response-to(medium) {
+    font-size: 25px;
+  }
 }
 
 .upper {
@@ -27,6 +40,10 @@ body {
 .text {
   font-size: 24px;
   font-weight: 400;
+
+  @include response-to(medium) {
+    font-size: 20px;
+  }
 }
 
 .page-title {
