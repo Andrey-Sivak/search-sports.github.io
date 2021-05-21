@@ -6,14 +6,44 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include response-to(small) {
+      flex-direction: column;
+    }
   }
 
   & .menu {
     display: flex;
     margin-bottom: 23px;
 
+    @include response-to(small) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     &__item {
       margin-right: 51px;
+
+      @include response-to(small) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__right {
+
+    @include response-to(small) {
+      order: 0;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__left {
+
+    @include response-to(small) {
+      order: 1;
+      margin-bottom: 25px;
     }
   }
   

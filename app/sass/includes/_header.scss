@@ -2,11 +2,61 @@
   background-color: #202020;
   padding: 21px 0;
 
+  &.active {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 10000;
+  }
+
   &__logo {
     text-transform: uppercase;
     color: #fff;
     font-size: 24px;
     margin-right: 58px;
+
+    @include response-to(small) {
+      display: none;
+    }
+
+    &.mob {
+      display: none;
+
+      @include response-to(small) {
+        display: block;
+      }
+    }
+  }
+
+  &__mob-nav {
+    display: none;
+
+    @include response-to(small) {
+      display: flex;
+    }
+  }
+
+  &__login-mob {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url('../../img/login.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__mob-menu {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../img/menu-icon.png');
+    margin-left: 20px;
   }
 
   &__wrap {
@@ -15,30 +65,87 @@
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 
     @media(max-width: 1400px) {
       padding-left: 15px;
       padding-right: 15px;
+    }
+
+    &.active {
+
+      @include response-to(small) {
+        height: 100vh;
+        align-items: flex-start;
+
+        & .header__left,
+        & .header__right {
+          transform: translateX(0);
+        }
+      }
     }
   }
 
   &__left {
     display: flex;
     align-items: center;
+    @include transition-ease;
 
     & .header__link:nth-last-of-type(2) {
       margin-right: 48px;
       margin-left: 37px;
+
+      @include response-to(small) {
+        margin: 0 0 20px;
+      }
+    }
+
+    @include response-to(small) {
+      position: absolute;
+      right: 15px;
+      top: 50px;
+      transform: translateX(200%);
+
+      & div {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+        border-bottom: 1px solid #fff;
+
+        & a {
+          margin-bottom: 20px;
+        }
+      }
     }
   }
 
   &__right {
     display: flex;
     align-items: center;
+    @include transition-ease;
 
     & .header__link:nth-last-of-type(2) {
       margin-right: 38px;
       margin-left: 27px;
+
+      @include response-to(small) {
+        margin: 0 0 20px;
+      }
+    }
+
+    @include response-to(small) {
+      position: absolute;
+      flex-direction: column;
+      right: 15px;
+      top: 185px;
+      align-items: flex-end;
+      transform: translateX(200%);
+
+      & .header__link {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -49,6 +156,13 @@
 
     @include on-event {
       text-decoration: underline;
+    }
+
+    &.login {
+
+      @include response-to(small) {
+        display: none;
+      }
     }
   }
 }

@@ -17,6 +17,11 @@
       margin-bottom: 40px;
       font-weight: 700;
       font-size: 72px;
+
+      @include response-to(small) {
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
     }
 
     &__subcaption {
@@ -37,6 +42,10 @@
       @include response-to(medium) {
         font-size: 36px;
       }
+
+      @include response-to(small) {
+        font-size: 30px;
+      }
     }
 
     &__wrap {
@@ -44,12 +53,22 @@
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
+
+      @include response-to(small) {
+        flex-wrap: wrap;
+      }
     }
 
     &__item {
       max-width: 200px;
       text-align: center;
       position: relative;
+
+      @include response-to(small) {
+        max-width: unset;
+        width: 100%;
+        margin-bottom: 20px;
+      }
 
       &_link {
         position: absolute;
@@ -74,6 +93,11 @@
         @include flex-center();
         @include transition-ease;
 
+        @include response-to(small) {
+          width: 45px;
+          height: 45px;
+        }
+
         & img {
           display: block;
           max-width: 100%;
@@ -91,6 +115,11 @@
     & .container {
       display: flex;
       align-items: center;
+
+      @include response-to(small) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     &__img {
@@ -103,8 +132,22 @@
         flex-basis: 40%;
       }
 
+      @include response-to(small) {
+        flex-basis: unset;
+        width: 70%;
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+
       & img {
         max-width: 100%;
+      }
+    }
+
+    &__content {
+
+      @include response-to(small) {
+        text-align: center;
       }
     }
 
@@ -121,16 +164,34 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @include response-to(small) {
+        flex-direction: column;
+      }
+    }
+
+    &__left {
+      text-align: center;
     }
 
     &__note {
       display: block;
       margin-top: 22px;
       margin-bottom: 42px;
+
+      @include response-to(small) {
+        margin-bottom: 20px;
+      }
     }
 
     &__btn {
       width: 300px;
+
+      @include response-to(small) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+      }
     }
 
     &__right {
@@ -148,6 +209,10 @@
 
         &:last-of-type {
           margin: 47px auto 0;
+
+          @include response-to(small) {
+            margin: 25px auto 0;
+          }
         }
 
         &:before {
@@ -176,6 +241,10 @@
     &__wrap {
       display: flex;
       justify-content: space-between;
+
+      @include response-to(small) {
+        flex-wrap: wrap;
+      }
     }
 
     &__item {
@@ -200,6 +269,12 @@
       @include response-to(medium) {
         width: 30%;
         height: unset;
+      }
+
+      @include response-to(small) {
+        width: 48%;
+        max-width: 200px;
+        margin-bottom: 15px;
       }
 
       &:after {
@@ -239,20 +314,37 @@
       justify-content: space-between;
       margin-bottom: 10px;
 
+      @include response-to(small) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       &_btn {
         width: 290px;
         font-weight: 500;
+
+        @include response-to(small) {
+          margin: 20px auto;
+        }
       }
     }
 
     &__subcaption {
       font-weight: 500;
       margin-bottom: 38px;
+
+      @include response-to(small) {
+        text-align: center;
+      }
     }
 
     &__wrap {
       display: flex;
       justify-content: space-between;
+
+      @include response-to(small) {
+        flex-wrap: wrap;
+      }
     }
 
     &__item {
@@ -260,6 +352,11 @@
 
       @include response-to(medium) {
         width: 22%;
+      }
+
+      @include response-to(small) {
+        width: 48%;
+        margin-bottom: 15px;
       }
 
       &_img {
@@ -305,6 +402,10 @@
       position: relative;
       width: fit-content;
 
+      @include response-to(small) {
+        text-align: center;
+      }
+
       &:before,
       &:after {
         position: absolute;
@@ -317,6 +418,10 @@
 
         @include response-to(large) {
           width: 50px;
+        }
+
+        @include response-to(small) {
+          content: none;
         }
       }
 
@@ -344,12 +449,23 @@
         display: flex;
         justify-content: space-between;
         align-items: stretch;
+
+        @include response-to(small) {
+          flex-wrap: wrap;
+        }
       }
     }
 
     &__content {
       width: 49%;
       position: relative;
+
+      @include response-to(small) {
+        width: 100%;
+        padding-bottom: 70px;
+        text-align: center;
+        margin-bottom: 25px;
+      }
 
       & .caption {
         margin-bottom: 23px;
@@ -361,6 +477,13 @@
       bottom: 0;
       left: 0;
       width: 320px;
+
+      @include  response-to(small) {
+        width: 90%;
+        max-width: 320px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     &__map {
@@ -371,6 +494,11 @@
 
       @include response-to(medium) {
         height: 300px;
+      }
+
+      @include response-to(small) {
+        width: 100%;
+        max-width: 400px;
       }
     }
   }
@@ -383,6 +511,10 @@
       margin-top: 23px;
       display: flex;
       justify-content: space-between;
+
+      @include response-to(small) {
+        flex-wrap: wrap;
+      }
     }
 
     &__item {
@@ -390,6 +522,13 @@
 
       @include response-to(medium) {
         width: 30%;
+      }
+
+      @include response-to(small) {
+        width: 100%;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        border-bottom: 1px  solid #000;
       }
 
       &_title {
@@ -406,6 +545,10 @@
         padding: 9px 14px;
         font-size: 18px;
         margin-bottom: 16px;
+
+        @include response-to(small) {
+          height: auto;
+        }
       }
 
       &_reviewer {
@@ -441,15 +584,31 @@
     padding-top: 30px;
     padding-bottom: 60px;
 
+    @include response-to(small) {
+      text-align: center;
+    }
+
     &__content {
       margin-top: 17px;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+
+      @include response-to(small) {
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+      }
     }
 
     &__btn {
       width: 325px;
+
+      @include response-to(small) {
+        width: 100%;
+        max-width: 320px;
+        margin: 20px auto;
+      }
     }
 
     &__text {
@@ -459,6 +618,11 @@
       @include response-to(medium) {
         max-width: 55%;
         margin-right: 20px;
+      }
+
+      @include response-to(small) {
+        max-width: unset;
+        margin-right: 0;
       }
     }
 
