@@ -1267,6 +1267,12 @@ label {
           -ms-flex-pack: justify;
               justify-content: space-between;
       margin-bottom: 22px; }
+      @media (max-width: 767px) {
+        .search-page .search__categories {
+          -webkit-flex-wrap: wrap;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
+          margin-bottom: 8px; } }
       .search-page .search__categories_item {
         width: 124px;
         background: #C4C4C4;
@@ -1289,6 +1295,9 @@ label {
             width: fit-content;
             padding-left: 10px;
             padding-right: 10px; } }
+        @media (max-width: 767px) {
+          .search-page .search__categories_item {
+            margin-bottom: 13px; } }
     .search-page .search__wrap {
       display: -webkit-box;
       display: -webkit-flex;

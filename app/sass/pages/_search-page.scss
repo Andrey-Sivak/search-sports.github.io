@@ -65,6 +65,11 @@
       justify-content: space-between;
       margin-bottom: 22px;
 
+      @include response-to(small) {
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+      }
+
       &_item {
         width: 124px;
         background: #C4C4C4;
@@ -87,6 +92,10 @@
           width: fit-content;
           padding-left: 10px;
           padding-right: 10px;
+        }
+
+        @include response-to(small) {
+          margin-bottom: 13px;
         }
       }
     }
