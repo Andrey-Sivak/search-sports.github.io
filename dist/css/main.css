@@ -395,11 +395,17 @@ body {
 .add-form {
   max-width: 410px;
   width: 100%; }
+  @media (max-width: 767px) {
+    .add-form {
+      margin-bottom: 35px; } }
   .add-form__title {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 80px;
     text-align: center; }
+    @media (max-width: 767px) {
+      .add-form__title {
+        margin-bottom: 20px; } }
   .add-form__wrap {
     border: 1px solid #000000;
     border-radius: 5px;
@@ -1186,6 +1192,17 @@ label {
       -ms-flex-pack: distribute;
           justify-content: space-around;
   width: 100%; }
+  @media (max-width: 992px) {
+    .add-location {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
 .search-page {
   height: calc(100vh - 200px);
