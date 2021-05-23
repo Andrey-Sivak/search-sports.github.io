@@ -50,6 +50,10 @@ body {
   text-align: center;
   font-size: 48px;
   font-weight: 700;
+
+  @include response-to(small) {
+    font-size: 35px;
+  }
 }
 
 .bg-grey-img {

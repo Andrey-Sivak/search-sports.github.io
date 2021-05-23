@@ -10,12 +10,29 @@
     margin: 15px auto 45px;
     align-items: center;
 
+    @include response-to(large) {
+      max-width: 1070px;
+      padding: 0 15px;
+    }
+
+    @include response-to(small) {
+      flex-direction: column;
+    }
+
     &_info {
       display: flex;
       align-items: center;
 
+      @include response-to(small) {
+        margin-bottom: 20px;
+      }
+
       & .text:first-of-type {
         margin-bottom: 10px;
+
+        @include response-to(small) {
+          margin-bottom: 5px;
+        }
       }
     }
 
@@ -28,6 +45,12 @@
       position: relative;
       @include flex-center();
       overflow: hidden;
+
+      @include response-to(small) {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+      }
 
       &-img {
         background-repeat: no-repeat;
@@ -42,6 +65,10 @@
 
       & span {
         font-size: 60px;
+
+        @include response-to(small) {
+          font-size: 30px;
+        }
       }
     }
 
@@ -60,6 +87,10 @@
 
         @include on-event {
           background: darken(#C4C4C4, 10);
+        }
+
+        @include response-to(small) {
+          font-size: 16px;
         }
       }
     }
@@ -82,10 +113,15 @@
       margin-top: 26px;
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     &_item {
       width: 235px;
+
+      @include response-to(small) {
+        width: 150px;
+      }
 
       &-img {
         display: block;
@@ -98,12 +134,21 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+
+        @include response-to(small) {
+          width: 100%;
+          height: 140px;
+        }
       }
 
       & p {
         color: #000;
         margin-bottom: 6px;
         font-size: 18px;
+
+        @include response-to(small) {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -124,6 +169,13 @@
 
       @include on-event {
         background: darken(#C4C4C4, 10);
+      }
+
+      @include response-to(small) {
+        max-width: 450px;
+        width: 90%;
+        font-size: 20px;
+        padding: 15px 0;
       }
     }
   }
